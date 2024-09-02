@@ -17,6 +17,15 @@ export class PokedexComponent {
   backHome(){
     this.selectedPokemon = null;
   }
-
+  rotateButton(event: MouseEvent, rotate: boolean): void {
+    const img = event.currentTarget as HTMLElement;
+    if (rotate) {
+      img.style.transform = 'translateX(-50%) rotate(360deg)';
+    } else {
+      img.style.transform = 'translateX(-50%) rotate(0deg)';
+    }
+  }
+  
+  
  
 }

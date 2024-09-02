@@ -21,6 +21,7 @@ export class PokeScreenComponent {
   end: number = 20;
   typeName!: string;
   isSearchByType: boolean = false;
+  imageError = "/assets/images/img-error.png"
   typeColors: { [key: string]: string } = {
     "normal": "#A8A77A",
     "fire": "#EE8130",
@@ -130,6 +131,19 @@ export class PokeScreenComponent {
       });
 
     })
+  }
+
+  rotateButton(event: MouseEvent, rotate: boolean): void {
+    const button = event.currentTarget as HTMLElement;
+    if (rotate) {
+      button.style.transform = 'rotate(360deg)';
+    } else {
+      button.style.transform = 'rotate(0deg)';
+    }
+  }
+  onImageError(event: Event) {
+    const imgElement = event.target as HTMLImageElement;
+    imgElement.src = this.imageError;
   }
 
 }
