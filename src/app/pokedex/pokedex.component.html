@@ -1,0 +1,10 @@
+
+<div class="header">
+    
+</div>
+<img class="img-bokebola" src="/assets/images/pokebola.png" alt="bokepola" width="10%" (click)="backHome()">
+<app-poke-screen *ngIf="!selectedPokemon" (selectedPokemon)="handlePokemonSelected($event)" ></app-poke-screen>
+<app-poke-description *ngIf="selectedPokemon" [selectedPokemon]="selectedPokemon"></app-poke-description>
+<footer>
+    
+</footer>

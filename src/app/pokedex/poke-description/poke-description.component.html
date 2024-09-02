@@ -1,0 +1,32 @@
+<div class="description-section">
+    <div class="poke-card">
+        <div class="img">
+            <img [src]="url" alt="" width="90%" height="90%" />       
+        </div>
+        <div class="data">
+            <div class="name">
+                <p>{{name}}</p>
+            </div>
+            <div class="types">
+                <div class="type" *ngFor="let type of types" [ngStyle]="{'background-color': getTypeColor(type.type.name)}">
+                    <p>{{type.type.name}}</p>
+                </div>
+            </div>
+            <div class="others">
+                <mat-form-field appearance="fill">
+                    <mat-label>Peso</mat-label>
+                    <input matInput class="inputText" [value]="peso" type="text" name="" id="" readonly>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Altura</mat-label>
+                    <input matInput  class="inputText" [value]="altura" type="text" name="" id="" readonly>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Numero</mat-label>
+                    <input matInput  class="inputText" [value]="numero" type="text" name="" id="" readonly>
+                </mat-form-field>
+                
+            </div>
+        </div>
+    </div>
+</div>
