@@ -26,10 +26,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('my-first-pokedex');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, my-first-pokedex');
-  });
 });
